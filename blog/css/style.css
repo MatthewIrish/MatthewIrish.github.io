@@ -1,0 +1,279 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+@font-face {
+    font-family: Josefinslab;
+    src: url(../fonts/serif/josefinslab-regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: opensans;
+    src: url(../fonts/sans-serif/opensans-regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/sans-serif/lato-regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size:16px;
+    font-family: opensans, Arial, sans-serif;
+}
+
+ol{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-top: .2rem solid;
+    border-bottom: .2rem solid;
+    font-size: 1.5rem;
+    border-color: grey;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol a{
+    text-align: center;
+    display: block;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+li{
+    float: left;
+}
+
+li a:hover {
+    text-decoration: line-through;
+    color: black;
+    animation: shake 0.5s;
+    transform: rotate(-5deg);
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 3rem;
+    transform: rotate(-5deg);
+    float: top;
+    text-align: center;
+    padding: 2.75rem;
+}
+
+.highlight {
+    font-family: Josefinslab, 'Times New Roman', serif;
+    font-size: 5rem;
+    color: #FEFBEA;
+    background-color: #cd5c5c;
+    padding: .75rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border: black .0125rem solid;
+    box-shadow: 2.5px 5px black;
+    text-shadow: 2.5px 2.5px black;
+}
+
+.article-image {
+    float: left;
+    padding: 0;
+    margin-left: 2.5rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 25%;
+    height: auto;
+}
+
+p {
+    margin-left: 2.5rem;
+    padding: 0;
+}
+
+h2 {
+    margin-left: 2.5rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    margin-left: 2.5rem;
+}
+
+time {
+    font-style: italic;
+    color: #333333;
+    margin-left: 2.5rem;
+}
+
+article {
+    width: 70%;
+    float: left;
+}
+
+.subsection {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 2rem;
+}
+
+figure img{
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+figure {
+    margin: 2px;
+    padding: 2px;
+
+}
+
+figcaption {
+    background-color: rgb(241, 237, 231);
+    padding: 1.2rem;
+    margin-top: 0;
+}
+
+.mainsection {
+    height: 85%;
+}
+
+aside {
+    float: right;
+    width: 20%;
+    border-left: solid 1px black;
+    padding-left: 1rem;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+aside img {
+    max-width: 70%;
+    height: auto;
+    margin-left: 2rem;
+}
+
+.expand {
+    font-size: .5rem;
+}
+
+aside p {
+    border-bottom: solid black 1px;
+    padding-bottom: 2rem;
+}
+
+footer {
+    height: 15%;
+}
+
+footer p {
+    color: #333333;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: inherit;
+    font-style: normal;
+}
+
+.subscribe {
+    font-family: Josefinslab, 'Times New Roman', serif;
+    font-size: 2rem;
+    float: left;
+    background-color: blue;
+    color: #fefbea;
+    border-radius: .75rem;
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: bolder;
+    box-shadow: 1.5px 3px black;
+    text-shadow: 2.5px 2.5px black;
+}
+
+.subscribe a{
+    color: #fefbea;
+}
+
+footer p:nth-child(1) {
+    text-align: left;
+    float: left;
+}
+
+footer p:nth-child(2) {
+    text-align: right;
+    float: right;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
